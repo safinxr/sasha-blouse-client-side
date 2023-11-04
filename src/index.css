@@ -5,8 +5,15 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    /* font-family: 'Poppins', sans-serif; */
-    /* font-family: 'Agbalumo', sans-serif; */
+body {
+
     font-family: 'Josefin Sans', sans-serif;
+}
+
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.agbalumo {
+    font-family: 'Agbalumo', sans-serif;
 }
