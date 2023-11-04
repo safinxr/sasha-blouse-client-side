@@ -6,14 +6,22 @@
 @tailwind utilities;
 
 body {
-
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+   
 }
-
+ /* font-family: 'Josefin Sans', sans-serif; */
 .poppins {
     font-family: 'Poppins', sans-serif;
 }
 
 .agbalumo {
     font-family: 'Agbalumo', sans-serif;
+}
+
+.black-text{
+    color: #231F20;
+}
+
+.black-bg{
+    background-color: #231F20;
 }
