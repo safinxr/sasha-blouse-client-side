@@ -1,8 +1,32 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import './navbar.css'
 
 const Navbar = () => {
+    const [navBg, setNavBg] = useState(false)
+    let { pathname } = useLocation();
+
+    useEffect(() => {
+        if (pathname === '/') {
+            setNavBg(false)
+
+        }
+        else {
+            setNavBg(true)
+        }
+    }, [pathname])
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY >= 80) {
+            setNavBg(true)
+        }
+        else {
+            if (pathname === '/') {
+                return setNavBg(false)
+            }
+            setNavBg(true)
+        }
+    })
 
     const navLink = <>
         <li><NavLink
@@ -38,7 +62,7 @@ const Navbar = () => {
 
     </>
     return (
-        <nav className='bg-gray-300 '>
+        <nav className= {navBg ? "sticky top-0 z-10 bg-white shadow-lg" : "sticky top-0 z-10"}>
             <div className="navbar max-w-6xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
