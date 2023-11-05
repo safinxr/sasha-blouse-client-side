@@ -9,7 +9,7 @@ const Banner = () => {
 
     return (
         <div className='mt-[-73px] bg-[url("https://i.ibb.co/pyW7JSY/Group-1.png")] bg-cover bg-center bg-white bg-blend-overlay bg-opacity-90 '>
-            <div className='max-w-6xl mx-auto px-3 md:px-7   pt-20 pb-4 lg:pb-6'>
+            <div className='max-w-6xl mx-auto px-3 md:px-8 lg:px-0  pt-20 pb-4 lg:pb-6'>
                 <Slide
                     duration={1000}
                     prevArrow={<></>}

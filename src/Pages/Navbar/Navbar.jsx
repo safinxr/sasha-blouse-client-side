@@ -56,8 +56,8 @@ const Navbar = () => {
     </>
     const smNavLink = <>
         <li><NavLink to='/'>HOME</NavLink></li>
-        <li><NavLink to='/'>HOME</NavLink></li>
-        <li><NavLink to='/'>HOME</NavLink></li>
+        <li><NavLink to='/fooditems'>FOOD ITEMS</NavLink></li>
+        <li><NavLink to='/blog'>BLOG</NavLink></li>
         <li><NavLink to='/'>HOME</NavLink></li>
 
     </>
