@@ -7,7 +7,7 @@ const FourOFour = () => {
     return (
         <div className='relative '>
             <Lottie animationData={fourOPage} loop={true} />
-            <div className='absolute bottom-24 left-1/2 transform -translate-x-1/2 '>
+            <div className='absolute lg:bottom-24 left-1/2 transform -translate-x-1/2 '>
                 <Link to='/' className=" relative inline-flex items-center justify-start py-2  pl-4 pr-12 overflow-hidden font-semibold black-text transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-white group w-full">
                     <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out black-bg group-hover:h-full"></span>
                     <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
