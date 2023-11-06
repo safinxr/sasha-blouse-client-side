@@ -9,48 +9,49 @@ import SignUp from "../Pages/SignUp/SignUp";
 import MyAddedFood from "../Pages/MyAddedFood/MyAddedFood";
 import AddNewFood from "../Pages/AddNewFood/AddNewFood";
 import MyOrderedFood from "../Pages/MyOrderedFood/MyOrderedFood";
+import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 
 const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Layout></Layout>,
-        errorElement:<FourOFour></FourOFour>,
-        children:[
-            {
-              path:'/',
-              element:<Home></Home>  
-            },
-            {
-              path:'/blog',
-              element:<Blog></Blog> 
-            },
-            {
-              path:'/fooditems',
-              element:<FoodItems></FoodItems>
-            },
-            {
-              path:'/signin',
-              element:<SignIn></SignIn>
-            },
-            {
-              path:'/signup',
-              element:<SignUp></SignUp>
-            },
-            {
-              path:'/myaddedfood',
-              element:<MyAddedFood></MyAddedFood>
-            },
-            {
-              path:'/addnewfood',
-              element:<AddNewFood></AddNewFood>
-            },
-            {
-              path:'/myorderedfood',
-              element:<MyOrderedFood></MyOrderedFood>
-            },
-            
-        ]
-    },
+  {
+    path: "/",
+    element: <Layout></Layout>,
+    errorElement: <FourOFour></FourOFour>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: '/blog',
+        element: <Blog></Blog>
+      },
+      {
+        path: '/fooditems',
+        element: <FoodItems></FoodItems>
+      },
+      {
+        path: '/signin',
+        element: <SignIn></SignIn>
+      },
+      {
+        path: '/signup',
+        element: <SignUp></SignUp>
+      },
+      {
+        path: '/myaddedfood',
+        element: <PrivateRoutes><MyAddedFood></MyAddedFood></PrivateRoutes>
+      },
+      {
+        path: '/addnewfood',
+        element:<PrivateRoutes><AddNewFood></AddNewFood></PrivateRoutes>
+      },
+      {
+        path: '/myorderedfood',
+        element: <PrivateRoutes><MyOrderedFood></MyOrderedFood></PrivateRoutes>
+      },
+
+    ]
+  },
 ]);
 
 export default router;
