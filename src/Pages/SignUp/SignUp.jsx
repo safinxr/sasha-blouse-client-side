@@ -21,7 +21,6 @@ const SignUp = () => {
     const navigate = useNavigate()
 
 
-console.log(shortLoading);
     // Form submit🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱
     const formSubmit = e => {
         setErrorText(null)
