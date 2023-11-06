@@ -7,9 +7,15 @@ import { ContextAuth } from '../../Context/Context';
 import { PulseLoader } from 'react-spinners';
 
 const Navbar = () => {
+
     const [navBg, setNavBg] = useState(false)
     let { pathname } = useLocation();
     const { user, logOut, shortLoading, setLoading } = useContext(ContextAuth)
+
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, [pathname]);
 
     useEffect(() => {
         if (pathname === '/') {
@@ -21,17 +27,19 @@ const Navbar = () => {
         }
     }, [pathname])
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY >= 80) {
-            setNavBg(true)
-        }
-        else {
-            if (pathname === '/') {
-                return setNavBg(false)
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 80) {
+                setNavBg(true)
             }
-            setNavBg(true)
-        }
-    })
+            else {
+                if (pathname === '/') {
+                    return setNavBg(false)
+                }
+                setNavBg(true)
+            }
+        })
+    }, [])
 
     const signOut = () => {
         logOut()
@@ -121,7 +129,7 @@ const Navbar = () => {
                     <li><NavLink to='/myaddedfood'>My added food</NavLink></li>
                     <li><NavLink to='/addnewfood'>  Add new food</NavLink></li>
                     <li><NavLink to='/myorderedfood'> My ordered food</NavLink></li>
-                  </ul>
+                </ul>
                 <div>
                     <button onClick={signOut} className=" relative inline-flex items-center justify-start py-2  pl-4 pr-12 overflow-hidden font-semibold black-text transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-white group w-full">
                         <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out black-bg group-hover:h-full"></span>
@@ -138,7 +146,7 @@ const Navbar = () => {
         </div>
     </div>
 
-  
+
     // RETURN START 🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔
     return (
         <nav className={navBg ? "sticky top-0 z-10 bg-white shadow-lg" : "sticky top-0 z-10"}>
@@ -167,7 +175,7 @@ const Navbar = () => {
                     {
                         shortLoading ? <PulseLoader color="#231F20" size={10} /> : <>{user ? userInfo : logIngLink}</>
                     }
-                    
+
                 </div>
             </div>
         </nav>

@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, useLocation } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import Home from "../Pages/Home/Home";
 import Blog from "../Pages/Blog/Blog";
@@ -10,6 +10,7 @@ import MyAddedFood from "../Pages/MyAddedFood/MyAddedFood";
 import AddNewFood from "../Pages/AddNewFood/AddNewFood";
 import MyOrderedFood from "../Pages/MyOrderedFood/MyOrderedFood";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
+
 
 const router = createBrowserRouter([
   {
