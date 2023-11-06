@@ -34,7 +34,6 @@ const Navbar = () => {
     })
 
     const signOut = () => {
-        console.log("yo logout");
         logOut()
         // .then( ()=>{
         //     console.log(" done");
@@ -139,8 +138,7 @@ const Navbar = () => {
         </div>
     </div>
 
-    console.log(shortLoading);
-
+  
     // RETURN START 🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔
     return (
         <nav className={navBg ? "sticky top-0 z-10 bg-white shadow-lg" : "sticky top-0 z-10"}>

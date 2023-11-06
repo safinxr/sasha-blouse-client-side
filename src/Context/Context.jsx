@@ -17,7 +17,7 @@ const Context = ({children}) => {
         return () => {
             unSubscribe();
         }
-    }, [shortLoading])
+    }, [])
 
     const emailPassSignUp = (email, password) => {
         setShortLoading(true)

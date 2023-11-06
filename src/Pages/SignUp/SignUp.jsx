@@ -11,6 +11,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { ContextAuth } from '../../Context/Context';
 import { PulseLoader} from 'react-spinners';
+import Swal from 'sweetalert2'
 
 
 const SignUp = () => {
@@ -44,8 +45,15 @@ const SignUp = () => {
             .then(res => {
                 upProfile(name)
                     .then(() => {
-
+                        Swal.fire({
+                            position: "center",
+                            icon: "success",
+                            title: "Sign up successful",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
                         navigate('/')
+                        setLoading(false)
                     }).catch((error) => {
                         setLoading(false)
                         setErrorText("error:" + " " + error.message.split("/")[1].split(")")[0]);
