@@ -65,19 +65,19 @@ const Navbar = () => {
 
     const logIngLink = <>
        
-        <Link to='/signin' className="mr-4 relative inline-flex items-center justify-center uppercase   py-1.5 px-5 overflow-hidden font-semibold black-text transition duration-300 ease-out border-2 border-[#231F20] rounded shadow-md group">
+        <Link to='/signin' className="mr-4 relative inline-flex items-center justify-center uppercase   py-2 px-5 overflow-hidden font-semibold black-text transition duration-300 ease-out border-2 border-[#231F20] rounded shadow-md group">
             <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full black-bg group-hover:translate-x-0 ease">
                 <FiLogIn className='text-2xl '></FiLogIn>               
             </span>
-            <span className="absolute flex items-center justify-center w-full h-full black-text transition-all duration-300 transform group-hover:translate-x-full ease">Sign in</span>
-            <span className="relative invisible">sign up</span>
+            <span className="absolute flex items-center justify-center w-full h-full black-text transition-all duration-300 transform group-hover:translate-x-full ease">SIGN IN</span>
+            <span className="relative invisible">SIGN IN00</span>
         </Link>
-        <Link to='/signup' className="relative inline-flex items-center justify-center uppercase   py-1.5 px-5 overflow-hidden font-semibold black-text transition duration-300 ease-out border-2 border-[#231F20] rounded shadow-md group">
+        <Link to='/signup' className="relative inline-flex items-center justify-center uppercase   py-2 px-5 overflow-hidden font-semibold black-text transition duration-300 ease-out border-2 border-[#231F20] rounded shadow-md group">
             <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full black-bg group-hover:translate-x-0 ease">
                 <FiLogIn className='text-2xl '></FiLogIn>               
             </span>
-            <span className="absolute flex items-center justify-center w-full h-full black-text transition-all duration-300 transform group-hover:translate-x-full ease">Sign up</span>
-            <span className="relative invisible">sign up</span>
+            <span className="absolute flex items-center justify-center w-full h-full black-text transition-all duration-300 transform group-hover:translate-x-full ease">SIGN UP</span>
+            <span className="relative invisible">SIGN UP0</span>
         </Link>
     </>
     return (
