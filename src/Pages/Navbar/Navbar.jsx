@@ -2,12 +2,14 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import './navbar.css'
 import { FiLogIn, FiUser } from 'react-icons/fi';
+import { MdLogout } from 'react-icons/md';
 import { ContextAuth } from '../../Context/Context';
+import { PulseLoader } from 'react-spinners';
 
 const Navbar = () => {
     const [navBg, setNavBg] = useState(false)
     let { pathname } = useLocation();
-    const { user, logOut } = useContext(ContextAuth)
+    const { user, logOut, shortLoading, setLoading } = useContext(ContextAuth)
 
     useEffect(() => {
         if (pathname === '/') {
@@ -91,7 +93,6 @@ const Navbar = () => {
             <span className="relative invisible">SIGN UP0</span>
         </Link>
     </>
-console.log(user);
     const userInfo = <div className='flex flex-col lg:flex-row lg:items-center '>
         <div className="dropdown dropdown-bottom dropdown-end flex items-center">
             <label tabIndex={0} className="">{
@@ -104,7 +105,7 @@ console.log(user);
 
             }</label>
 
-            <div tabIndex={0} className="dropdown-content z-[1]  shadow bg-base-100 rounded-box w-64 mt-5">
+            <div tabIndex={0} className="dropdown-content z-[1]  shadow bg-base-100  w-64 mt-5 rounded-md">
                 <div className='flex flex-col justify-center items-center p-4'>
                     {user?.photoURL ?
                         <img className='w-16 h-16  rounded-full ' src={user?.photoURL} alt="" />
@@ -124,32 +125,16 @@ console.log(user);
                             <svg className="w-5 h-5 black-text" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" sstrokelinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </span>
                         <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
-                            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" sstrokelinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            <MdLogout className='text-white text-xl'></MdLogout>
                         </span>
                         <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white uppercase">Sing Out</span>
                     </button>
                 </div>
             </div>
         </div>
-
-        {/* <div className='flex items-center justify-between bg-[#FF4D24] mr-2 ps-2 py-0 rounded-3xl '>
-            <div className='ms-2 text-base font-medium text-white'>{user?.displayName}</div>
-            {
-                user?.photoURL ? <img className='ms-2 mr-[-2px] w-9 rounded-full' src={user.photoURL} alt="" /> :
-                    <div className='ms-2 mr-[-2px] w-9 h-9 rounded-full bg-[#525D7C] flex justify-center items-center'>
-                        <p className='text-white text-xl'>{user?.email.slice(0, 1)}</p>
-                    </div>
-            }
-        </div> */}
-        {/* <button onClick={signOut}
-            className="rounded-md  px-4 py-1.5 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-[#FF4D24] ">
-
-            <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-[#FF4D24] top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-            <span className="relative text-[#FF4D24] transition duration-300 group-hover:text-white ease">Sign out
-            </span>
-        </button> */}
-
     </div>
+
+    // RETURN START 🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔
     return (
         <nav className={navBg ? "sticky top-0 z-10 bg-white shadow-lg" : "sticky top-0 z-10"}>
             <div className="navbar max-w-6xl mx-auto py-0 md:py-2 px-3 md:px-8 lg:px-0">
@@ -174,7 +159,10 @@ console.log(user);
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {userInfo}
+                    {
+                        shortLoading ? <PulseLoader color="#231F20" size={10} /> : <>{user ? userInfo : logIngLink}</>
+                    }
+                    
                 </div>
             </div>
         </nav>

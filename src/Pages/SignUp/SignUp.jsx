@@ -10,17 +10,18 @@ import { BsGoogle } from 'react-icons/bs';
 import { Link, useNavigate } from 'react-router-dom';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { ContextAuth } from '../../Context/Context';
+import { PulseLoader} from 'react-spinners';
 
 
 const SignUp = () => {
     const [errorText, setErrorText] = useState(null)
     const [seen, setSeen] = useState(true)
     const provider = new GoogleAuthProvider();
-    const { emailPassSignUp, upProfile, googleSignIn } = useContext(ContextAuth)
+    const { emailPassSignUp, upProfile, googleSignIn, shortLoading, setLoading } = useContext(ContextAuth)
     const navigate = useNavigate()
 
 
-
+console.log(shortLoading);
     // Form submit🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱
     const formSubmit = e => {
         setErrorText(null)
@@ -44,12 +45,10 @@ const SignUp = () => {
             .then(res => {
                 upProfile(name)
                     .then(() => {
-                       alert('yo done')
 
-                        console.log('hooo');
                         navigate('/')
                     }).catch((error) => {
-                        console.log(error.message);
+                        setLoading(false)
                         setErrorText("error:" + " " + error.message.split("/")[1].split(")")[0]);
                     });
 
@@ -58,7 +57,7 @@ const SignUp = () => {
 
             })
             .catch(error => {
-                console.log(error.message);
+                setLoading(false)
                 setErrorText("error:" + " " + error.message.split("/")[1].split(")")[0]);
             })
 
@@ -139,7 +138,7 @@ const SignUp = () => {
                             }
 
                             <button type="submit" className='w-full bg-white py-2 rounded-lg black-text uppercase font-semibold active:scale-95'>
-                                SIGN UP
+                                {shortLoading ? <PulseLoader color="#231F20" size={10} /> : "SIGN UP"}
                             </button>
                         </form>
 
