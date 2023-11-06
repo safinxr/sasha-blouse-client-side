@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Lottie from "lottie-react";
 import signUpJaon from '../../assets/signup.json'
 import { BiSolidUser } from 'react-icons/bi';
@@ -7,55 +7,72 @@ import { RiLockPasswordFill } from 'react-icons/ri';
 import { FaEyeSlash } from 'react-icons/fa';
 import { IoEyeSharp } from 'react-icons/io5';
 import { BsGoogle } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { GoogleAuthProvider } from 'firebase/auth';
+import { ContextAuth } from '../../Context/Context';
 
 
 const SignUp = () => {
     const [errorText, setErrorText] = useState(null)
     const [seen, setSeen] = useState(true)
-    // Form submit🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱
+    const provider = new GoogleAuthProvider();
+    const { emailPassSignUp, upProfile, googleSignIn } = useContext(ContextAuth)
+    const navigate = useNavigate()
+
+
+
+    // Form submit🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱
     const formSubmit = e => {
         setErrorText(null)
         e.preventDefault()
         const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(name, email, password);
 
 
-        // if (password.length < 6) {
-        //     return setErrorText('password is less than 6 characters')
-        // }
-        // if (!/[A-Z]/.test(password)) {
-        //     return setErrorText("password don't have a capital letter")
-        // }
+        if (password.length < 6) {
+            return setErrorText('password is less than 6 characters')
+        }
+        if (!/[A-Z]/.test(password)) {
+            return setErrorText("password don't have a capital letter")
+        }
 
-        // if (!/[^A-Za-z0-9]/.test(password)) {
-        //     return setErrorText("password don't have a special character")
-        // }
-        // emailPassSignUp(email, password)
-        //     .then(res => {
-        //         upProfile(name)
-        //             .then(() => {
-        //                alert('yo done')
+        if (!/[^A-Za-z0-9]/.test(password)) {
+            return setErrorText("password don't have a special character")
+        }
+        emailPassSignUp(email, password)
+            .then(res => {
+                upProfile(name)
+                    .then(() => {
+                       alert('yo done')
 
-        //                 setTimeout(function () {
-        //                     navigate('/')
-        //                 }, 1500);
-        //             }).catch((error) => {
-        //                 console.log(error.message);
-        //                 setErrorText("error:" + " " + error.message.split("/")[1].split(")")[0]);
-        //             });
+                        console.log('hooo');
+                        navigate('/')
+                    }).catch((error) => {
+                        console.log(error.message);
+                        setErrorText("error:" + " " + error.message.split("/")[1].split(")")[0]);
+                    });
 
 
 
 
-        //     })
-        //     .catch(error => {
-        //         console.log(error.message);
-        //         setErrorText("error:" + " " + error.message.split("/")[1].split(")")[0]);
-        //     })
+            })
+            .catch(error => {
+                console.log(error.message);
+                setErrorText("error:" + " " + error.message.split("/")[1].split(")")[0]);
+            })
 
+
+    }
+
+    // Google Handel 🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱
+    const googleHandel = (xProvider) => {
+        googleSignIn(xProvider)
+            .then(() => {
+                navigate('/')
+            }).catch((error) => {
+                console.log(error.message);
+            });
 
     }
 
@@ -135,7 +152,7 @@ const SignUp = () => {
                                 <p className='text-[#E5E7EB] border px-1.5 rounded-md'>OR</p>
                                 <div className='border w-full mx-5'></div>
                             </div>
-                            <button type="submit" className='w-full bg-white py-2 rounded-lg black-text uppercase font-semibold active:scale-95 mb-8 flex justify-center items-center'>
+                            <button onClick={() => googleHandel(provider)} className='w-full bg-white py-2 rounded-lg black-text uppercase font-semibold active:scale-95 mb-8 flex justify-center items-center'>
                                 SIGN UP WITH <span className='ms-2'><BsGoogle></BsGoogle></span>
                             </button>
                         </div>
