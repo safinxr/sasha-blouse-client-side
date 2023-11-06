@@ -6,6 +6,9 @@ import FoodItems from "../Pages/FoodItems/FoodItems";
 import FourOFour from "../Pages/FourOFour/FourOFour";
 import SignIn from "../Pages/SignIn/SignIn";
 import SignUp from "../Pages/SignUp/SignUp";
+import MyAddedFood from "../Pages/MyAddedFood/MyAddedFood";
+import AddNewFood from "../Pages/AddNewFood/AddNewFood";
+import MyOrderedFood from "../Pages/MyOrderedFood/MyOrderedFood";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +35,18 @@ const router = createBrowserRouter([
             {
               path:'/signup',
               element:<SignUp></SignUp>
+            },
+            {
+              path:'/myaddedfood',
+              element:<MyAddedFood></MyAddedFood>
+            },
+            {
+              path:'/addnewfood',
+              element:<AddNewFood></AddNewFood>
+            },
+            {
+              path:'/myorderedfood',
+              element:<MyOrderedFood></MyOrderedFood>
             },
             
         ]
