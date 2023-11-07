@@ -12,6 +12,7 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import { ContextAuth } from '../../Context/Context';
 import { PulseLoader} from 'react-spinners';
 import Swal from 'sweetalert2'
+import axios from 'axios';
 
 
 const SignUp = () => {
@@ -45,6 +46,8 @@ const SignUp = () => {
             .then(res => {
                 upProfile(name)
                     .then(() => {
+                        axios.post('http://localhost:5000/allusers', {name, email})
+                        .then(res => console.log(res.data))
                         Swal.fire({
                             position: "center",
                             icon: "success",
@@ -74,7 +77,12 @@ const SignUp = () => {
     // Google Handel 🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱
     const googleHandel = (xProvider) => {
         googleSignIn(xProvider)
-            .then(() => {
+            .then(res => {
+                const user = res.user
+                const name = user.displayName
+                const email = user.email
+                axios.post('http://localhost:5000/allusers', { name, email })
+                    .then(res => console.log(res.data))
                 navigate('/')
             }).catch((error) => {
                 console.log(error.message);

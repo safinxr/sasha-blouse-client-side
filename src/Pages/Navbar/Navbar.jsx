@@ -39,14 +39,10 @@ const Navbar = () => {
                 setNavBg(true)
             }
         })
-    }, [])
+    }, [pathname])
 
     const signOut = () => {
         logOut()
-        // .then( ()=>{
-        //     console.log(" done");
-        // })
-        // .catch()
     }
 
     const navLink = <>
@@ -149,7 +145,7 @@ const Navbar = () => {
 
     // RETURN START 🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔
     return (
-        <nav className={navBg ? "sticky top-0 z-10 bg-white shadow-lg" : "sticky top-0 z-10"}>
+        <nav className={navBg ? "sticky top-0 z-10 bg-white shadow-md" : "sticky top-0 z-10"}>
             <div className="navbar max-w-6xl mx-auto py-0 md:py-2 px-3 md:px-8 lg:px-0">
                 <div className="navbar-start">
                     <div className="dropdown">

@@ -178,5 +178,41 @@
     "food_origin": "Italy",
     "description": "A heavenly Italian dessert made with layers of ladyfingers, mascarpone cheese, and cocoa powder, soaked in espresso. Our Tiramisu Delight is a delightful and indulgent way to end your meal.",
     "ordered": 0
+  },
+  {
+    "id": 16,
+    "food_name": "bbq chicken salad",
+    "food_image": "https://www.daisybrand.com/wp-content/uploads/2019/12/grilled-chicken-salad-avoc770x628_9083.jpg",
+    "food_category": "American cuisine",
+    "price": 4.99,
+    "quantity": 103,
+    "added_by": "Chef Sofia",
+    "food_origin": "American",
+    "description": "BBQ Chicken Salad with Creamy Avocado is a delightful and satisfying dish that combines the smoky, savory flavors of barbecue chicken with the creamy goodness of ripe avocados. Here's a detailed description of this mouthwatering salad:",
+    "ordered": 2
+  },
+  {
+    "id": 17,
+    "food_name": "chicken chopped salad",
+    "food_image": "https://thebigmansworld.com/wp-content/uploads/2023/04/chicken-lettuce-wraps-recipe1.jpg",
+    "food_category": "Cuisine",
+    "price": 4.99,
+    "quantity": 103,
+    "added_by": "Chef Sofia",
+    "food_origin": "Asian",
+    "description": "Crisp and sturdy lettuce leaves, such as iceberg or butter lettuce, serve as the vessel for holding the salad ingredients. These leaves are often used to wrap the other components, similar to traditional Asian lettuce wraps.",
+    "ordered": 2
+  },
+  {
+    "id": 18,
+    "food_name": "chicken salad",
+    "food_image": "https://www.licious.in/blog/wp-content/uploads/2022/06/shutterstock_1264839352-750x750.jpg",
+    "food_category": "Cuisine",
+    "price": 3.99,
+    "quantity": 153,
+    "added_by": "Chef Sofia",
+    "food_origin": "Asian",
+    "description": "The primary ingredient is cooked chicken. You can use poached, grilled, roasted, or even leftover chicken. It's typically shredded or chopped into bite-sized pieces.",
+    "ordered": 2
   }
 ]
