@@ -6,7 +6,9 @@ import { PropagateLoader } from 'react-spinners';
 
 const FoodItems = () => {
     const [pageCount, setPageCount] = useState(1)
+    const [searchPage, setSearchPage] = useState(0)
     const [loading, setLoading] = useState(true)
+    const [loadingBtn, setLoadingBtn] = useState(false)
     const [allData, setAllData] = useState([]);
     const [search, setSearch] = useState('')
     const [dataCount, setDataCount] = useState(0)
@@ -15,11 +17,13 @@ const FoodItems = () => {
 
 
     useEffect(() => {
+        setLoadingBtn(true)
         axios.get(`http://localhost:5000/allfooditems?page=${pageCount}`)
             .then(res => {
-                setLoading(true)
+
                 setAllData([...allData, ...res.data.result])
                 setDataCount(res.data.count)
+                setLoadingBtn(false)
                 setLoading(false)
             })
     }, [pageCount])
@@ -30,9 +34,10 @@ const FoodItems = () => {
     const searchBtn = () => {
         setLoading(true)
         console.log(search);
-        axios.get(`http://localhost:5000/searchfood/${search}`)
+        axios.get(`http://localhost:5000/searchfood/?name=${search}&`)
             .then(res => {
                 setAllData(res.data)
+                setSearchPage(res.data.length)
                 setLoading(false)
             })
     }
@@ -69,15 +74,20 @@ const FoodItems = () => {
             }
 
             {
-                allData.length === dataCount ? <></>
+                allData.length === dataCount || allData.length === searchPage ? <></>
                     :
                     <div className='mb-20 flex justify-center'>
-                        <button
-                            onClick={() => setPageCount(pageCount + 1)}
+                        {
+                            loadingBtn ? <PropagateLoader color="#231F20" size={20} />
+                                :
+                                <button
+                                    onClick={() => setPageCount(pageCount + 1)}
 
-                            className='px-5 py-2 black-bg text-white active:scale-95 rounded'>
-                            See more
-                        </button>
+                                    className='px-5 py-2 black-bg text-white active:scale-95 rounded'>
+                                    See more
+                                </button>
+                        }
+
                     </div>
             }
 
