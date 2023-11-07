@@ -25,7 +25,7 @@ const Banner = () => {
                             <p className='text-sm my-2 line-clamp-2 black-text'>This mouthwatering salad is a harmonious blend of smoky, grilled chicken, crisp and vibrant vegetables, and the creamy indulgence of ripe avocados. The star of this dish is the succulent, barbecued chicken, which is expertly seasoned and grilled to perfection</p>
 
                             <div className='flex items-center justify-center mt-4'>
-                                <Link to='/fooditems' className='px-6 py-2 rounded black-bg text-white uppercase flex items-center hover:scale-[0.98] duration-200 '>more details </Link>
+                                <Link to='/singlefood/654a30997cc12aac75610dfc' className='px-6 py-2 rounded black-bg text-white uppercase flex items-center hover:scale-[0.98] duration-200 '>more details </Link>
                                 <Link to='/fooditems' className='px-6 py-2 rounded black-bg text-white uppercase flex items-center hover:scale-[0.98] duration-200 ms-5'>All Food Items </Link>
                             </div>
 
@@ -42,7 +42,7 @@ const Banner = () => {
                             <p className='text-sm my-2 line-clamp-2 black-text'>The chicken is marinated with a harmonious blend of Asian flavors, including soy sauce, ginger, and garlic, creating a savory and slightly sweet profile that's both satisfying and irresistible.</p>
 
                             <div className='flex items-center mt-4'>
-                                <Link to='/fooditems' className='px-6 py-2 rounded black-bg text-white uppercase flex items-center hover:scale-[0.98] duration-200 '>more details </Link>
+                                <Link to='/singlefood/654a30997cc12aac75610dfd' className='px-6 py-2 rounded black-bg text-white uppercase flex items-center hover:scale-[0.98] duration-200 '>more details </Link>
                                 <Link to='/fooditems' className='px-6 py-2 rounded black-bg text-white uppercase flex items-center hover:scale-[0.98] duration-200 ms-5'>All Food Items </Link>
                             </div>
 
@@ -59,7 +59,7 @@ const Banner = () => {
                             <p className='text-sm my-2 line-clamp-2 black-text'> Cinnamon is known for its warm and sweet flavor. It is often used in both sweet and savory dishes, such as apple pie and Moroccan tagines. Cinnamon adds depth and warmth to recipes.</p>
 
                             <div className='flex items-center mt-4'>
-                                <Link to='/fooditems' className='px-6 py-2 rounded black-bg text-white uppercase flex items-center hover:scale-[0.98] duration-200 '>more details </Link>
+                                <Link to='/singlefood/654a30997cc12aac75610dfe' className='px-6 py-2 rounded black-bg text-white uppercase flex items-center hover:scale-[0.98] duration-200 '>more details </Link>
                                 <Link to='/fooditems' className='px-6 py-2 rounded black-bg text-white uppercase flex items-center hover:scale-[0.98] duration-200 ms-5'>All Food Items </Link>
                             </div>
 

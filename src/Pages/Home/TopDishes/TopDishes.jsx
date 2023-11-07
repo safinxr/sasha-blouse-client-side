@@ -19,7 +19,6 @@ const TopDishes = () => {
     }, [])
 
 
-    console.log(topFood);
     return (
         <div className='max-w-6xl mx-auto px-3 md:px-8 lg:px-0 my-28'>
             <div>

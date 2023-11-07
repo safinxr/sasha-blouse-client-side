@@ -1,12 +1,16 @@
 import React from 'react';
 import { AiFillStar } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 
 const TopDishesCard = ({ food }) => {
-    const { id, food_name, food_image, food_category, price, quantity, added_by, food_origin, description, ordered } = food
+    const navigate = useNavigate()
+    const { _id, food_name, food_image, food_category, price, quantity, added_by, food_origin, description, ordered } = food
     return (
-        <div className='black-shadow rounded flex md:flex-col group'>
+        <div 
+        onClick={()=>navigate(`/singlefood/${_id}`)}
+        className='black-shadow rounded flex md:flex-col group active:scale-95 duration-200 cursor-pointer'>
             <div className='h-32 md:h-80 w-40 md:w-auto overflow-hidden flex-1 md:flex-auto'>
-                <img className='w-full h-full object-cover md:object-left rounded-t group-hover:scale-105 duration-300' src={food_image} alt="" />
+                <img className='w-full h-full object-cover md:object-left rounded-s md:rounded-s-none md:rounded-t group-hover:scale-105 duration-300' src={food_image} alt="" />
             </div>
 
             {/* 🤖🤖🤖🤖🤖🤖🤖 */}
