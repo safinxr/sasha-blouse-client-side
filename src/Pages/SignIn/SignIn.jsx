@@ -52,7 +52,6 @@ const SignIn = () => {
             });
 
     }
-    console.log(shortLoading)
     return (
         <div className='max-w-4xl mx-auto my-20 px-3 md:px-8 lg:px-0'>
             <div className='black-shadow2 flex justify-center rounded-md'>

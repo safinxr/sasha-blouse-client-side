@@ -11,6 +11,7 @@ import AddNewFood from "../Pages/AddNewFood/AddNewFood";
 import MyOrderedFood from "../Pages/MyOrderedFood/MyOrderedFood";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 import SingleFood from "../Pages/SingleFood/SingleFood";
+import BuyPage from "../Pages/BuyPage/BuyPage";
 
 
 const router = createBrowserRouter([
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: '/myorderedfood',
         element: <PrivateRoutes><MyOrderedFood></MyOrderedFood></PrivateRoutes>
+      },
+      {
+        path: '/buypage/:id',
+        element: <PrivateRoutes><BuyPage></BuyPage></PrivateRoutes>
       },
       {
         path: '/singlefood/:id',
