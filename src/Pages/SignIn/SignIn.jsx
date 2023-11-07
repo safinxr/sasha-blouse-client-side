@@ -113,7 +113,7 @@ const SignIn = () => {
                         </form>
 
                         <div className='lg:px-5'>
-                            <p className='my-5 ms-2 text-start text-white'>Already have an account? <Link className='underline underline-offset-4' to='/Signin'>Sign in</Link>
+                            <p className='my-5 ms-2 text-start text-white'>Don't have an account? <Link className='underline underline-offset-4' to='/Signup'>Sign up</Link>
                             </p>
 
                             <div className='mb-4 flex justify-center items-center'>

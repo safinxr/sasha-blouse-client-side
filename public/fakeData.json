@@ -1,6 +1,5 @@
 [
-  {
-    "id": 1,
+  {    
     "food_name": "spicy szechuan noodles",
     "food_image": "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/48/76/0/5hkdEzvxTPq1mbdqRf6i_0S9A6427.jpg",
     "food_category": "Chinese",
@@ -11,8 +10,7 @@
     "description": "A fiery combination of noodles, vegetables, and Szechuan spices that will set your taste buds on fire. This dish is a customer favorite with a perfect balance of heat and flavor, making it an excellent choice for spice enthusiasts.",
     "ordered": 3
   },
-  {
-    "id": 2,
+  {    
     "food_name": "mediterranean mezze platter",
     "food_image": "https://www.simplyrecipes.com/thmb/qf6TaQLIC6hjm97QGhO3yuS5iZ8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__12__Mezze-Platter-LEAD-04-5850a1457fd845cc97d47b87cffe09bd.jpg",
     "food_category": "Mediterranean",
@@ -23,8 +21,7 @@
     "description": "A delightful assortment of hummus, falafel, olives, and pita bread, perfect for sharing with friends. This generous platter offers a taste of the Mediterranean with fresh and authentic flavors that transport you to the Greek coast.",
     "ordered": 2
   },
-  {
-    "id": 3,
+  {    
     "food_name": "sushi fusion roll",
     "food_image": "https://fusionsteakhouse.com/wp-content/uploads/2016/05/Crazy-Web.jpg",
     "food_category": "Japanese",
@@ -35,8 +32,7 @@
     "description": "A unique sushi roll with a twist, featuring fresh fish, avocado, and a tangy mango salsa. Our Sushi Fusion Roll offers a delightful combination of textures and flavors that will leave your taste buds dancing with joy.",
     "ordered": 4
   },
-  {
-    "id": 4,
+  {    
     "food_name": "creamy mushroom risotto",
     "food_image": "https://www.threeolivesbranch.com/wp-content/uploads/2020/12/creamy-mushroom-risotto-threeolivesbranch-6-500x375.jpg",
     "food_category": "Italian",
@@ -47,8 +43,7 @@
     "description": "Indulge in a velvety risotto infused with a medley of sautéed mushrooms and Parmesan cheese. Our Creamy Mushroom Risotto is a comforting Italian classic that promises a rich and satisfying dining experience.",
     "ordered": 6
   },
-  {
-    "id": 5,
+  {    
     "food_name": "bbq pulled pork sandwich",
     "food_image": "https://keviniscooking.com/wp-content/uploads/2023/04/Southern-Pulled-Pork-Sandwich-square.jpg",
     "food_category": "American",
@@ -59,8 +54,7 @@
     "description": "A hearty sandwich loaded with tender pulled pork, smothered in barbecue sauce, and served with coleslaw. Our BBQ Pulled Pork Sandwich is a mouthwatering American classic that's perfect for those craving bold and savory flavors.",
     "ordered": 3
   },
-  {
-    "id": 6,
+  {    
     "food_name": "vegan thai green curry",
     "food_image": "https://hot-thai-kitchen.com/wp-content/uploads/2022/09/vegan-green-curry-sq-1.jpg",
     "food_category": "Thai",
@@ -71,8 +65,7 @@
     "description": "An aromatic and creamy Thai green curry with a variety of fresh vegetables and tofu. Our Vegan Thai Green Curry is a plant_based delight that showcases the vibrant and complex flavors of Thai cuisine.",
     "ordered": 2
   },
-  {
-    "id": 7,
+  {    
     "food_name": "classic margherita pizza",
     "food_image": "https://au.ooni.com/cdn/shop/articles/20220211142645-margherita-9920.jpg?crop=center&height=800&v=1662539926&width=800",
     "food_category": "Italian",
@@ -83,8 +76,7 @@
     "description": "A timeless pizza topped with fresh tomatoes, mozzarella, basil, and a drizzle of olive oil. Our Classic Margherita Pizza captures the essence of Italian culinary tradition with its simplicity and quality ingredients.",
     "ordered": 5
   },
-  {
-    "id": 8,
+  {    
     "food_name": "savory beef stroganoff",
     "food_image": "https://marleyspoon.com/media/recipes/242057/main_photos/large/saucy-9dac8c055a02b08f550d34b6e23be4bc.jpeg",
     "food_category": "Russian",
@@ -95,8 +87,7 @@
     "description": "Tender strips of beef cooked in a rich, creamy mushroom sauce, served over egg noodles. Our Savory Beef Stroganoff brings the flavors of Russia to your plate, delivering comfort and satisfaction in every bite.",
     "ordered": 1
   },
-  {
-    "id": 9,
+  {    
     "food_name": "southwest chicken tacos",
     "food_image": "https://i0.wp.com/mylifeafterdairy.com/wp-content/uploads/2020/03/Southwest-Chicken-Tacos-11.jpeg?fit=1350%2C900&ssl=1",
     "food_category": "Mexican",
@@ -107,8 +98,7 @@
     "description": "A Tex_Mex favorite featuring grilled chicken, black beans, corn, and zesty chipotle sauce in soft tortillas. Our Southwest Chicken Tacos bring the vibrant and spicy flavors of Mexico to your table, creating a fiesta in every bite.",
     "ordered": 2
   },
-  {
-    "id": 10,
+  {    
     "food_name": "greek gyros platter",
     "food_image": "https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/umgxckeq/93b25bb9-b283-40db-9990-d75a05df6646.jpg",
     "food_category": "Mediterranean",
@@ -119,8 +109,7 @@
     "description": "A delectable platter with slices of seasoned gyro meat, pita bread, and a refreshing tzatziki sauce. Our Greek Gyros Platter offers a taste of the Mediterranean with its succulent and flavorful Greek_style gyro meat.",
     "ordered": 3
   },
-  {
-    "id": 11,
+  {    
     "food_name": "vegetable pad thai",
     "food_image": "https://img.taste.com.au/z9EIVHJg/taste/2021/02/10-minute-vegetarian-pad-thai-168946-2.jpg",
     "food_category": "Thai",
@@ -131,8 +120,7 @@
     "description": "A tantalizing Thai dish featuring stir_fried rice noodles with fresh vegetables and a tangy tamarind sauce. Our Vegetable Pad Thai combines the exotic flavors of Thailand in a delightful and satisfying dish.",
     "ordered": 2
   },
-  {
-    "id": 12,
+  {    
     "food_name": "seafood paella",
     "food_image": "https://www.savoryexperiments.com/wp-content/uploads/2022/05/Seafood-Paella-20.jpg",
     "food_category": "Spanish",
@@ -143,8 +131,7 @@
     "description": "A Spanish specialty loaded with a mix of seafood, saffron_infused rice, and a medley of spices. Our Seafood Paella is a vibrant and flavorful dish that transports your taste buds to the sunny shores of Spain.",
     "ordered": 5
   },
-  {
-    "id": 13,
+  {    
     "food_name": "hawaiian poke bowl",
     "food_image": "https://casualepicure.com/wp-content/uploads/2022/07/hawaiian-style-ahi-tuna-poke-bowl-2.jpg",
     "food_category": "Hawaiian",
@@ -155,8 +142,7 @@
     "description": "A refreshing bowl of diced raw fish, seaweed, and tropical fruits, served over sushi rice. Our Hawaiian Poke Bowl is a taste of paradise, bringing the flavors of Hawaii to your plate.",
     "ordered": 3
   },
-  {
-    "id": 14,
+  {    
     "food_name": "beef and broccoli stir_fry",
     "food_image": "https://realfood.tesco.com/media/images/1400x919-Crispy-beef-and-broccoli-stir-fry-ec31e6b7-5468-474e-8e0a-8c4cc909ce58-0-1400x919.jpg",
     "food_category": "Chinese",
@@ -167,8 +153,7 @@
     "description": "Tender beef slices, crisp broccoli, and a savory soy_based sauce in a quick and flavorful stir-fry. Our Beef and Broccoli Stir-Fry brings the delicious flavors of Chinese cuisine to your table.",
     "ordered": 6
   },
-  {
-    "id": 15,
+  {    
     "food_name": "tiramisu delight",
     "food_image": "https://images.squarespace-cdn.com/content/v1/64a36b66e840fa06e8dd0025/ba78eca6-1d59-4af3-8fd7-c98907268cfd/Publix-Bakery_Tiramisu-Delight-Cake_slice-angle.jpg",
     "food_category": "Italian",
@@ -179,8 +164,7 @@
     "description": "A heavenly Italian dessert made with layers of ladyfingers, mascarpone cheese, and cocoa powder, soaked in espresso. Our Tiramisu Delight is a delightful and indulgent way to end your meal.",
     "ordered": 0
   },
-  {
-    "id": 16,
+  {    
     "food_name": "bbq chicken salad",
     "food_image": "https://www.daisybrand.com/wp-content/uploads/2019/12/grilled-chicken-salad-avoc770x628_9083.jpg",
     "food_category": "American cuisine",
@@ -191,8 +175,7 @@
     "description": "BBQ Chicken Salad with Creamy Avocado is a delightful and satisfying dish that combines the smoky, savory flavors of barbecue chicken with the creamy goodness of ripe avocados. Here's a detailed description of this mouthwatering salad:",
     "ordered": 2
   },
-  {
-    "id": 17,
+  {    
     "food_name": "chicken chopped salad",
     "food_image": "https://thebigmansworld.com/wp-content/uploads/2023/04/chicken-lettuce-wraps-recipe1.jpg",
     "food_category": "Cuisine",
@@ -203,8 +186,7 @@
     "description": "Crisp and sturdy lettuce leaves, such as iceberg or butter lettuce, serve as the vessel for holding the salad ingredients. These leaves are often used to wrap the other components, similar to traditional Asian lettuce wraps.",
     "ordered": 2
   },
-  {
-    "id": 18,
+  {    
     "food_name": "chicken salad",
     "food_image": "https://www.licious.in/blog/wp-content/uploads/2022/06/shutterstock_1264839352-750x750.jpg",
     "food_category": "Cuisine",

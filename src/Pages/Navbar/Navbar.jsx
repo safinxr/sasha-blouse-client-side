@@ -96,7 +96,7 @@ const Navbar = () => {
             <span className="relative invisible">SIGN UP0</span>
         </Link>
     </>
-    const userInfo = <div className='flex flex-col lg:flex-row lg:items-center '>
+        const userInfo = <div className='flex flex-col lg:flex-row lg:items-center '>
         <div className="dropdown dropdown-bottom dropdown-end flex items-center">
             <label tabIndex={0} className="hover:scale-105">{
                 user?.photoURL ?
