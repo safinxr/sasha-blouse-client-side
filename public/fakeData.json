@@ -63,7 +63,7 @@
     "added_by": "Chef Achara",
     "food_origin": "Thailand",
     "description": "An aromatic and creamy Thai green curry with a variety of fresh vegetables and tofu. Our Vegan Thai Green Curry is a plant_based delight that showcases the vibrant and complex flavors of Thai cuisine.",
-    "ordered": 2
+    "ordered": 22
   },
   {    
     "food_name": "classic margherita pizza",
@@ -96,7 +96,7 @@
     "added_by": "Chef Carmen",
     "food_origin": "Mexico",
     "description": "A Tex_Mex favorite featuring grilled chicken, black beans, corn, and zesty chipotle sauce in soft tortillas. Our Southwest Chicken Tacos bring the vibrant and spicy flavors of Mexico to your table, creating a fiesta in every bite.",
-    "ordered": 2
+    "ordered": 42
   },
   {    
     "food_name": "greek gyros platter",
@@ -107,7 +107,7 @@
     "added_by": "Chef Nikos",
     "food_origin": "Greece",
     "description": "A delectable platter with slices of seasoned gyro meat, pita bread, and a refreshing tzatziki sauce. Our Greek Gyros Platter offers a taste of the Mediterranean with its succulent and flavorful Greek_style gyro meat.",
-    "ordered": 3
+    "ordered": 73
   },
   {    
     "food_name": "vegetable pad thai",
@@ -118,7 +118,7 @@
     "added_by": "Chef Somsak",
     "food_origin": "Thailand",
     "description": "A tantalizing Thai dish featuring stir_fried rice noodles with fresh vegetables and a tangy tamarind sauce. Our Vegetable Pad Thai combines the exotic flavors of Thailand in a delightful and satisfying dish.",
-    "ordered": 2
+    "ordered": 12
   },
   {    
     "food_name": "seafood paella",
@@ -140,7 +140,7 @@
     "added_by": "Chef Keoni",
     "food_origin": "Hawaii",
     "description": "A refreshing bowl of diced raw fish, seaweed, and tropical fruits, served over sushi rice. Our Hawaiian Poke Bowl is a taste of paradise, bringing the flavors of Hawaii to your plate.",
-    "ordered": 3
+    "ordered": 33
   },
   {    
     "food_name": "beef and broccoli stir_fry",
@@ -151,7 +151,7 @@
     "added_by": "Chef Mei",
     "food_origin": "China",
     "description": "Tender beef slices, crisp broccoli, and a savory soy_based sauce in a quick and flavorful stir-fry. Our Beef and Broccoli Stir-Fry brings the delicious flavors of Chinese cuisine to your table.",
-    "ordered": 6
+    "ordered": 16
   },
   {    
     "food_name": "tiramisu delight",
@@ -162,7 +162,7 @@
     "added_by": "Chef Sofia",
     "food_origin": "Italy",
     "description": "A heavenly Italian dessert made with layers of ladyfingers, mascarpone cheese, and cocoa powder, soaked in espresso. Our Tiramisu Delight is a delightful and indulgent way to end your meal.",
-    "ordered": 0
+    "ordered": 10
   },
   {    
     "food_name": "bbq chicken salad",

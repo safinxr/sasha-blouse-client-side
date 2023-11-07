@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const AllFoodCard = ({ food }) => {
     const navigate = useNavigate()
-    const { id, food_name, food_image, food_category, price, quantity, added_by, food_origin, description, ordered } = food
+    const { id, food_name, food_image, food_category, price, quantity } = food
     return (
         <div className=' rounded black-shadow bg-white relative hover:scale-[1.02] duration-200'
         onClick={()=>navigate('/')}
