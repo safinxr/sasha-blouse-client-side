@@ -18,7 +18,7 @@ const SingleFood = () => {
     
 
 
-    const { _id, food_name, food_image, food_category, price, quantity, added_by, food_origin, description, ordered } = data
+    const { _id, food_name, food_image, food_category, price, quantity, added_by, food_origin, description} = data
 
     useEffect(() => {
         axios.get(`http://localhost:5000/singlefood/?id=${id}`)
