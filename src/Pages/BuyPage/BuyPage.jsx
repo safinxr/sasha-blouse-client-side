@@ -52,7 +52,8 @@ const BuyPage = () => {
             if (quantity >= qty) {
                 if (user.email !== email) {
                     const foodId = _id;
-                    const buyingData = { food_name, food_image, food_category, totalPrice, foodId, qty, food_origin, description }
+                    const email = user.email
+                    const buyingData = { food_name, food_image, food_category, totalPrice, foodId, qty, food_origin, description, email, added_by }
                     const newQty = quantity - qty;
 
                     axios.post(`http://localhost:5000/buyingdata/?newqty=${newQty}&od=${ordered}`, buyingData)

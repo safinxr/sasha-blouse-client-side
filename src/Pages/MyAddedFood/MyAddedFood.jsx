@@ -3,6 +3,7 @@ import { ContextAuth } from '../../Context/Context';
 import axios from 'axios';
 import Table from './Table';
 import Swal from 'sweetalert2';
+import { HiOutlineEmojiSad } from 'react-icons/hi';
 
 const MyAddedFood = () => {
 
@@ -32,6 +33,12 @@ const MyAddedFood = () => {
             })
     }
 
+    if (data.length === 0){
+        return <div className='flex justify-center items-center h-[50vh]'>
+            <h2 className='text-4xl text-gray-500  font-semibold uppercase'>no food found </h2>
+            <h2 className='text-5xl text-gray-500  font-semibold uppercase ms-2'><HiOutlineEmojiSad></HiOutlineEmojiSad></h2>
+        </div>
+    }
 
     return (
         <div className='max-w-6xl mx-auto px-3 mx:px-8 lg:px-0'>
