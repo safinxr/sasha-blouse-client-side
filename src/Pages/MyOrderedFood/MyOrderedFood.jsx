@@ -3,19 +3,28 @@ import { ContextAuth } from '../../Context/Context';
 import axios from 'axios';
 import TableTwo from './TableTwo';
 import { HiOutlineEmojiSad } from 'react-icons/hi';
+import { PropagateLoader } from 'react-spinners';
 
 const MyOrderedFood = () => {
     const { user } = useContext(ContextAuth)
     const [data, setData] = useState([])
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/myordered/?email=${user.email}`)
-            .then(res => setData(res.data))
+        axios.get(`https://sasha-server-side.vercel.app/myordered/?email=${user.email}`)
+            .then(res => {
+                setData(res.data)
+                setLoading(false)
+            })
     }, [])
     console.log(data);
 
 
-
+    if (loading) {
+        return <div className='h-[80vh] flex justify-center items-center'>
+            <PropagateLoader color="#231F20" size={20} />
+        </div>
+    }
 
     if (data.length === 0) {
         return <div className='flex justify-center items-center h-[50vh]'>

@@ -4,21 +4,26 @@ import axios from 'axios';
 import Table from './Table';
 import Swal from 'sweetalert2';
 import { HiOutlineEmojiSad } from 'react-icons/hi';
+import { PropagateLoader } from 'react-spinners';
 
 const MyAddedFood = () => {
 
     const { user } = useContext(ContextAuth)
     const [data, setData] = useState([])
+    const [loading, setLoading] = useState(true)
 
 
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/myaddedfood/?email=${user.email}`)
-            .then(res => setData(res.data))
+        axios.get(`https://sasha-server-side.vercel.app/myaddedfood/?email=${user.email}`)
+            .then(res => {
+                setData(res.data)
+                setLoading(false)
+            })
     }, [])
 
     const deleteBtn = (id) => {
-        axios.delete(`http://localhost:5000/deletefood/?id=${id}`)
+        axios.delete(`https://sasha-server-side.vercel.app/deletefood/?id=${id}`)
             .then(res => {
 
                 const newData = data.filter(oldData => oldData._id !== id)
@@ -31,6 +36,12 @@ const MyAddedFood = () => {
                     timer: 1500
                 })
             })
+    }
+
+    if (loading) {
+        return <div className='h-[80vh] flex justify-center items-center'>
+            <PropagateLoader color="#231F20" size={20} />
+        </div>
     }
 
     if (data.length === 0){

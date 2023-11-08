@@ -19,7 +19,7 @@ const FoodItems = () => {
 
     useEffect(() => {
         setLoadingBtn(true)
-        axios.get(`http://localhost:5000/allfooditems?page=${pageCount}`)
+        axios.get(`https://sasha-server-side.vercel.app/allfooditems?page=${pageCount}`)
             .then(res => {
 
                 setAllData([...allData, ...res.data.result])
@@ -37,7 +37,7 @@ const FoodItems = () => {
         if(search){
             setLoading(true)
             console.log(search);
-            axios.get(`http://localhost:5000/searchfood/?name=${search}&`)
+            axios.get(`https://sasha-server-side.vercel.app/searchfood/?name=${search}&`)
                 .then(res => {
                     setAllData(res.data)
                     setSearchPage(res.data.length)

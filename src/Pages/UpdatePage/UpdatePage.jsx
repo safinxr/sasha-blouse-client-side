@@ -12,7 +12,7 @@ const UpdatePage = () => {
     const { _id, food_name, food_image, food_category, price, quantity, added_by, food_origin, description, ordered } = data
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/singlefood/?id=${id}`)
+        axios.get(`https://sasha-server-side.vercel.app/singlefood/?id=${id}`)
             .then(res => {
                 setData(res.data)
 
@@ -40,7 +40,7 @@ const UpdatePage = () => {
         const foodData = { email, added_by, food_name, food_category, food_origin, description, price, food_image, quantity, ordered };
 
      
-        axios.put(`http://localhost:5000/updatefood/?id=${_id}`, foodData)
+        axios.put(`https://sasha-server-side.vercel.app/updatefood/?id=${_id}`, foodData)
             .then(res => {
                 console.log(res.data);
                 Swal.fire({
