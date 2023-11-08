@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const AllFoodCard = ({ food }) => {
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
+
     const navigate = useNavigate()
     const { _id, food_name, food_image, food_category, price, quantity } = food
     return (
-        <div className=' rounded black-shadow bg-white relative hover:scale-[1.02] duration-200 cursor-pointer'
+        <div data-aos="fade-up" className=' rounded black-shadow bg-white relative hover:scale-[1.02] duration-200 cursor-pointer'
             onClick={() => navigate(`/singlefood/${_id}`)}
         >
             <img className='rounded-t h-60 w-full object-cover' src={food_image} alt="" />

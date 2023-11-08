@@ -7,10 +7,15 @@ import Swal from 'sweetalert2'
 import { ContextAuth } from '../../Context/Context';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 
 const SingleFood = () => {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     const navigate = useNavigate()
     const { id } = useParams()
     const [data, setData] = useState([])
@@ -59,7 +64,7 @@ const SingleFood = () => {
     return (
         <div className='bg-[url("https://i.ibb.co/pyW7JSY/Group-1.png")] bg-cover bg-center bg-white bg-blend-overlay bg-opacity-90 h-screen flex items-center'>
             <dir className='max-w-6xl mx-auto px-3 md:px-8 lg:px-0 my-32 black-text'>
-                <div className='bg-white black-shadow flex h-[550px] rounded'>
+                <div data-aos="zoom-in-up" className='bg-white black-shadow flex h-[550px] rounded'>
                     <div className='w-1/2'>
                         <img className='w-[1000px] h-full object-cover rounded-s' src={food_image} alt="" />
                     </div>

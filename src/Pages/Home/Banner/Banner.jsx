@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BiZoomOut } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { Fade, Slide, Zoom } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const Banner = () => {
+    useEffect(() => {
+        AOS.init();
+    }, [])
 
     return (
         <div className='mt-[-73px] bg-[url("https://i.ibb.co/pyW7JSY/Group-1.png")] bg-cover bg-center bg-white bg-blend-overlay bg-opacity-90 '>
-            <div className='max-w-6xl mx-auto px-3 md:px-8 lg:px-0  pt-20 pb-4 lg:pb-6'>
-                <Fade
+            <div data-aos="fade-up" className='max-w-6xl mx-auto px-3 md:px-8 lg:px-0  pt-20 pb-4 lg:pb-6'>
+                <Slide
                     duration={1000}
                     prevArrow={<></>}
                     nextArrow={<></>}
@@ -68,7 +72,7 @@ const Banner = () => {
                             <img className='ms-auto' src="https://i.ibb.co/QjC9nTr/first-slider.png" alt="" />
                         </div>
                     </div>
-                </Fade>
+                </Slide>
             </div>
         </div>
     );
