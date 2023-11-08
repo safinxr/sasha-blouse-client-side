@@ -10,6 +10,7 @@ import { ContextAuth } from '../../Context/Context';
 import Swal from 'sweetalert2';
 
 const BuyPage = () => {
+    const [reset, setReset] = useState(true)
     const { user } = useContext(ContextAuth)
     const { id } = useParams()
     const [data, setData] = useState([])
@@ -24,7 +25,7 @@ const BuyPage = () => {
             .then(res => {
                 setData(res.data)
             })
-    }, [])
+    }, [reset])
 
     const notify = (x) => toast.error(x, {
         position: "top-center",
@@ -41,21 +42,22 @@ const BuyPage = () => {
         const value = parseInt(e.target.value);
         setQty(value)
         const result = price * value || 0
-        const res = parseInt(result.toFixed(2))
+        const res = parseFloat(result.toFixed(2))
         setTotalPrice(res)
     }
 
     const buyBtn = () => {
         if (qty > 0) {
+
             if (quantity >= qty) {
-                if(user.email !== email){
+                if (user.email !== email) {
                     const foodId = _id;
                     const buyingData = { food_name, food_image, food_category, totalPrice, foodId, qty, food_origin, description }
-                    console.log(buyingData);
+                    const newQty = quantity - qty;
 
-                    axios.post('http://localhost:5000/buyingdata', buyingData)
+                    axios.post(`http://localhost:5000/buyingdata/?newqty=${newQty}&od=${ordered}`, buyingData)
                         .then(res => {
-                            console.log(res.data);
+                            setReset(!reset)
                             Swal.fire({
                                 position: 'center',
                                 icon: 'success',
@@ -65,7 +67,7 @@ const BuyPage = () => {
                             })
                         })
                 }
-                else{
+                else {
                     notify("Sorry you can't buy your own food")
                 }
 
@@ -73,6 +75,9 @@ const BuyPage = () => {
             else {
                 notify("Insufficient Quantity")
             }
+        }
+        else{
+            notify("Please enter quantity")
         }
     }
 
