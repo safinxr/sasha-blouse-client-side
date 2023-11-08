@@ -33,7 +33,7 @@ const MyOrderedFood = () => {
         </div>
     }
     return (
-        <div className='max-w-6xl mx-auto px-3 mx:px-8 lg:px-0'>
+        <div className='max-w-6xl mx-auto px-3 mx:px-8 lg:px-0 '>
             <h1 className='uppercase text-2xl font-bold text-center mt-16'>My ordered FooD</h1>
 
             <div className="overflow-x-auto mt-6 shadow-2xl">
