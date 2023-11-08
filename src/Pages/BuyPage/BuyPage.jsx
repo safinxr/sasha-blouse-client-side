@@ -38,10 +38,10 @@ const BuyPage = () => {
     });
 
     const quantityHandel = e => {
-        const value = e.target.value;
+        const value = parseInt(e.target.value);
         setQty(value)
-        const result = price * value
-        const res = result.toFixed(2)
+        const result = price * value || 0
+        const res = parseInt(result.toFixed(2))
         setTotalPrice(res)
     }
 
@@ -51,6 +51,7 @@ const BuyPage = () => {
                 if(user.email !== email){
                     const foodId = _id;
                     const buyingData = { food_name, food_image, food_category, totalPrice, foodId, qty, food_origin, description }
+                    console.log(buyingData);
 
                     axios.post('http://localhost:5000/buyingdata', buyingData)
                         .then(res => {
