@@ -42,7 +42,10 @@ const SingleFood = () => {
     const buyBtn = () => {
         if (quantity > 0){
             navigate(`/buypage/${_id}`)
-        }       
+        }   
+        else{
+            notify("Sorry out of stock")
+        }    
 
     }
 

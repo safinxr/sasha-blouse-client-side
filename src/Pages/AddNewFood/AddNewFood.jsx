@@ -15,14 +15,13 @@ const AddNewFood = () => {
         const food_name = e.target.name.value.toLowerCase()
         const food_category = e.target.category.value;
         const food_origin = e.target.origin.value;
-        const price = e.target.price.value;
+        const price = parseInt(e.target.price.value) ;
         const food_image = e.target.img.value;
-        const quantity = e.target.quantity.value;
+        const quantity = parseInt(e.target.quantity.value) ;
         const description = e.target.description.value;
         const ordered = 0;
 
         const carData = { email, added_by, food_name, food_category, food_origin, description, price, food_image, quantity, ordered };
-
 
 
         axios.post('http://localhost:5000/addfood', carData)
