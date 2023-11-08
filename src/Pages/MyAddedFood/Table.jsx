@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { AiFillDelete } from 'react-icons/ai';
 
-const Table = ({food}) => {
+const Table = ({ food, deleteBtn }) => {
     const { _id, food_name, food_image, food_category, price, quantity, added_by, food_origin, description, ordered } = food
     return (
         <table className="table">
@@ -25,16 +25,20 @@ const Table = ({food}) => {
                         Food Added by : {added_by}
                         <br />
                         <span className="badge badge-ghost badge-sm">
-                        Food Origin : {food_origin}</span>
+                            Food Origin : {food_origin}</span>
                     </td>
                     <td className='w-2/12'>PRICE : ${price}
-                    <br/>
+                        <br />
                         Available quantity : {quantity}
                     </td>
                     <th className='w-2/12'>
                         <div className='flex items-center justify-between'>
                             <Link to={`/updatepage/${_id}`} className='uppercase active:scale-95 px-4 bg-black py-2 text-white rounded'>update</Link>
-                            <button className="active:scale-95 text-2xl px-4 py-1 border-2 border-black rounded"><AiFillDelete></AiFillDelete></button>
+
+
+                            <button
+                                onClick={ ()=>deleteBtn(_id)}
+                                className="active:scale-95 text-2xl px-4 py-1 border-2 border-black rounded"><AiFillDelete></AiFillDelete></button>
                         </div>
 
                     </th>
