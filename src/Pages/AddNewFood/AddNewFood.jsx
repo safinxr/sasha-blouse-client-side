@@ -37,26 +37,6 @@ const AddNewFood = () => {
                 e.target.reset()
             })
 
-        // fetch('https://trigun-cars-server-side.vercel.app/cardata', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(carData)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         if (data.acknowledged) {
-        //             Swal.fire({
-        //                 position: 'center',
-        //                 icon: 'success',
-        //                 title: 'Car added successful',
-        //                 showConfirmButton: false,
-        //                 timer: 1500
-        //             })
-        //             e.target.reset()
-        //         };
-        //     })
-
 
     }
 

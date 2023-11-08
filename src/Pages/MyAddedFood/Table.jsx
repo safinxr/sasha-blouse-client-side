@@ -33,7 +33,7 @@ const Table = ({food}) => {
                     </td>
                     <th className='w-2/12'>
                         <div className='flex items-center justify-between'>
-                            <Link to='/' className='uppercase active:scale-95 px-4 bg-black py-2 text-white rounded'>update</Link>
+                            <Link to={`/updatepage/${_id}`} className='uppercase active:scale-95 px-4 bg-black py-2 text-white rounded'>update</Link>
                             <button className="active:scale-95 text-2xl px-4 py-1 border-2 border-black rounded"><AiFillDelete></AiFillDelete></button>
                         </div>
 
