@@ -13,6 +13,7 @@ import { ContextAuth } from '../../Context/Context';
 import { PulseLoader} from 'react-spinners';
 import Swal from 'sweetalert2'
 import axios from 'axios';
+import { Helmet } from 'react-helmet';
 
 
 const SignUp = () => {
@@ -46,7 +47,7 @@ const SignUp = () => {
             .then(res => {
                 upProfile(name)
                     .then(() => {
-                        axios.post('https://sasha-server-side.vercel.app/allusers', {name, email})
+                        axios.post('http://localhost:5000/allusers', {name, email})
                         .then(res => console.log(res.data))
                         Swal.fire({
                             position: "center",
@@ -81,7 +82,7 @@ const SignUp = () => {
                 const user = res.user
                 const name = user.displayName
                 const email = user.email
-                axios.post('https://sasha-server-side.vercel.app/allusers', { name, email })
+                axios.post('http://localhost:5000/allusers', { name, email })
                     .then(res => console.log(res.data))
                 navigate('/')
             }).catch((error) => {
@@ -92,6 +93,9 @@ const SignUp = () => {
 
     return (
         <div className='max-w-4xl mx-auto my-20 px-3 md:px-8 lg:px-0'>
+            <Helmet>
+                <title>Sign up - Sasha Blouse</title>
+            </Helmet>
             <div className='black-shadow2 flex justify-center rounded-md'>
 
 

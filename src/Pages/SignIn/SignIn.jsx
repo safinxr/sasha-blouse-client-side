@@ -11,6 +11,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { ContextAuth } from '../../Context/Context';
 import { PulseLoader } from 'react-spinners';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -54,6 +55,9 @@ const SignIn = () => {
     }
     return (
         <div className='max-w-4xl mx-auto my-20 px-3 md:px-8 lg:px-0'>
+            <Helmet>
+                <title>Sign in - Sasha Blouse</title>
+            </Helmet>
             <div className='black-shadow2 flex justify-center rounded-md'>
 
 

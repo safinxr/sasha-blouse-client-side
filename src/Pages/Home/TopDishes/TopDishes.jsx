@@ -10,7 +10,7 @@ const TopDishes = () => {
     const [topFood, setTopFood] = useState([]);
 
     useEffect(() => {
-        axios.get('https://sasha-server-side.vercel.app/topdishes')
+        axios.get('http://localhost:5000/topdishes')
             .then(res => {
                 setTopFood(res.data)
                 setLoading(false)

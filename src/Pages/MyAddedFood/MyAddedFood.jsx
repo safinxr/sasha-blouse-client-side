@@ -5,6 +5,7 @@ import Table from './Table';
 import Swal from 'sweetalert2';
 import { HiOutlineEmojiSad } from 'react-icons/hi';
 import { PropagateLoader } from 'react-spinners';
+import { Helmet } from 'react-helmet';
 
 const MyAddedFood = () => {
 
@@ -15,7 +16,7 @@ const MyAddedFood = () => {
 
 
     useEffect(() => {
-        axios.get(`https://sasha-server-side.vercel.app/myaddedfood/?email=${user.email}`, {withCredentials:true})
+        axios.get(`http://localhost:5000/myaddedfood/?email=${user.email}`, {withCredentials:true})
             .then(res => {
                 setData(res.data)
                 setLoading(false)
@@ -23,7 +24,7 @@ const MyAddedFood = () => {
     }, [])
 
     const deleteBtn = (id) => {
-        axios.delete(`https://sasha-server-side.vercel.app/deletefood/?id=${id}`)
+        axios.delete(`http://localhost:5000/deletefood/?id=${id}`)
             .then(res => {
 
                 const newData = data.filter(oldData => oldData._id !== id)
@@ -53,6 +54,9 @@ const MyAddedFood = () => {
 
     return (
         <div className='max-w-6xl mx-auto px-3 mx:px-8 lg:px-0'>
+            <Helmet>
+                <title>My Added Food - Sasha Blouse</title>
+            </Helmet>
             <h1 className='uppercase text-2xl font-bold text-center mt-16'>My added FooD</h1>
 
             <div className="overflow-x-auto mt-6 shadow-2xl">

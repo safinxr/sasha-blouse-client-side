@@ -4,6 +4,7 @@ import { BiSearchAlt2 } from 'react-icons/bi';
 import AllFoodCard from './AllFoodCard';
 import { PropagateLoader } from 'react-spinners';
 import { HiOutlineEmojiSad } from 'react-icons/hi';
+import { Helmet } from 'react-helmet';
 
 const FoodItems = () => {
     const [pageCount, setPageCount] = useState(1)
@@ -19,7 +20,7 @@ const FoodItems = () => {
 
     useEffect(() => {
         setLoadingBtn(true)
-        axios.get(`https://sasha-server-side.vercel.app/allfooditems?page=${pageCount}`)
+        axios.get(`http://localhost:5000/allfooditems?page=${pageCount}`)
             .then(res => {
 
                 setAllData([...allData, ...res.data.result])
@@ -37,7 +38,7 @@ const FoodItems = () => {
         if(search){
             setLoading(true)
             console.log(search);
-            axios.get(`https://sasha-server-side.vercel.app/searchfood/?name=${search}&`)
+            axios.get(`http://localhost:5000/searchfood/?name=${search}&`)
                 .then(res => {
                     setAllData(res.data)
                     setSearchPage(res.data.length)
@@ -57,6 +58,9 @@ const FoodItems = () => {
 
     return (
         <div className='max-w-6xl mx-auto px-3 md:-px-8 lg:px-0'>
+            <Helmet>
+                <title>All Food Items - Sasha Blouse</title>
+            </Helmet>
             <div className={inputValue ? 'mt-12 text-2xl max-w-4xl mx-auto rounded-md font-medium border-2  border-[#231F20] flex items-center':
                 'mt-12 text-2xl max-w-4xl mx-auto rounded-md font-medium border-2  border-[#eb2d2d] flex items-center'
             }>

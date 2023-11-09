@@ -4,6 +4,7 @@ import axios from 'axios';
 import TableTwo from './TableTwo';
 import { HiOutlineEmojiSad } from 'react-icons/hi';
 import { PropagateLoader } from 'react-spinners';
+import { Helmet } from 'react-helmet';
 
 const MyOrderedFood = () => {
     const { user } = useContext(ContextAuth)
@@ -11,7 +12,7 @@ const MyOrderedFood = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        axios.get(`https://sasha-server-side.vercel.app/myordered/?email=${user.email}`, {withCredentials:true})
+        axios.get(`http://localhost:5000/myordered/?email=${user.email}`, {withCredentials:true})
             .then(res => {
                 setData(res.data)
                 setLoading(false)
@@ -34,6 +35,9 @@ const MyOrderedFood = () => {
     }
     return (
         <div className='max-w-6xl mx-auto px-3 mx:px-8 lg:px-0 '>
+            <Helmet>
+                <title>My Ordered Food - Sasha Blouse</title>
+            </Helmet>
             <h1 className='uppercase text-2xl font-bold text-center mt-16'>My ordered FooD</h1>
 
             <div className="overflow-x-auto mt-6 shadow-2xl">

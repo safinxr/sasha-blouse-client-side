@@ -8,6 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ContextAuth } from '../../Context/Context';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
 
 const BuyPage = () => {
     const [reset, setReset] = useState(true)
@@ -21,7 +22,7 @@ const BuyPage = () => {
 
 
     useEffect(() => {
-        axios.get(`https://sasha-server-side.vercel.app/singlefood/?id=${id}`)
+        axios.get(`http://localhost:5000/singlefood/?id=${id}`)
             .then(res => {
                 setData(res.data)
             })
@@ -56,7 +57,7 @@ const BuyPage = () => {
                     const buyingData = { food_name, food_image, food_category, totalPrice, foodId, qty, food_origin, description, email, added_by }
                     const newQty = quantity - qty;
 
-                    axios.post(`https://sasha-server-side.vercel.app/buyingdata/?newqty=${newQty}&od=${ordered}`, buyingData)
+                    axios.post(`http://localhost:5000/buyingdata/?newqty=${newQty}&od=${ordered}`, buyingData)
                         .then(res => {
                             setReset(!reset)
                             Swal.fire({
@@ -86,6 +87,9 @@ const BuyPage = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Food Purchase - Sasha Blouse</title>
+            </Helmet>
             <div className='h-[88vh] relative max-w-6xl mx-auto px-3 md:px-8 lg:px-0'>
                 <Lottie className='h-full ms-[-450px] ' animationData={order} loop={true} />
                 <div className='absolute right-0 top-1/2 -translate-y-1/2 w-[500px] bg-white shadow-2xl px-8 py-16 rounded'>

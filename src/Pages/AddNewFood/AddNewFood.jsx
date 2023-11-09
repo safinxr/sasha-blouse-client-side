@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { ContextAuth } from '../../Context/Context';
 import axios from 'axios';
+import { Helmet } from 'react-helmet';
 
 const AddNewFood = () => {
 
@@ -24,7 +25,7 @@ const AddNewFood = () => {
         const carData = { email, added_by, food_name, food_category, food_origin, description, price, food_image, quantity, ordered };
 
 
-        axios.post('https://sasha-server-side.vercel.app/addfood', carData)
+        axios.post('http://localhost:5000/addfood', carData)
             .then(res => {
                 Swal.fire({
                     position: 'center',
@@ -41,6 +42,9 @@ const AddNewFood = () => {
 
     return (
         <div className='bg-[url("https://i.ibb.co/pyW7JSY/Group-1.png")] bg-cover bg-center bg-white bg-blend-overlay bg-opacity-90  flex items-center justify-center'>
+            <Helmet>
+                <title>Add New Food - Sasha Blouse</title>
+            </Helmet>
             <div className='w-[700px] bg-white shadow-2xl border py-12 px-6 my-20 rounded'>
                 <h1 className='uppercase text-xl font-semibold text-center mb-6'>add new food</h1>
                 <form onSubmit={addHandel}

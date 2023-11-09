@@ -9,6 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -26,7 +27,7 @@ const SingleFood = () => {
     const { _id, food_name, food_image, food_category, price, quantity, added_by, food_origin, description} = data
 
     useEffect(() => {
-        axios.get(`https://sasha-server-side.vercel.app/singlefood/?id=${id}`)
+        axios.get(`http://localhost:5000/singlefood/?id=${id}`)
             .then(res => {
                 setData(res.data)
                 setLoading(false)
@@ -63,6 +64,9 @@ const SingleFood = () => {
     }
     return (
         <div className='bg-[url("https://i.ibb.co/pyW7JSY/Group-1.png")] bg-cover bg-center bg-white bg-blend-overlay bg-opacity-90 h-screen flex items-center'>
+            <Helmet>
+                <title>Food Details - Sasha Blouse</title>
+            </Helmet>
             <dir className='max-w-6xl mx-auto px-3 md:px-8 lg:px-0 my-32 black-text'>
                 <div data-aos="zoom-in-up" className='bg-white black-shadow flex h-[550px] rounded'>
                     <div className='w-1/2'>

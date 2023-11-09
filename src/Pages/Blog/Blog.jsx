@@ -1,10 +1,14 @@
 import React from 'react';
 import Lottie from "lottie-react";
 import Banner from '../../assets/forBlogPage.json'
+import { Helmet } from 'react-helmet';
 
 const Blog = () => {
     return (
         <div >
+            <Helmet>
+                <title>Blogs - Sasha Blouse</title>
+            </Helmet>
             <div className=' relative flex justify-center items-center mt-[-60px] md:mt-[-140px] lg:mt-[-220px] '>
                 <Lottie className=' scale-90' animationData={Banner} loop={true} />
             </div>
