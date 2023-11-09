@@ -7,7 +7,7 @@ import { RiLockPasswordFill } from 'react-icons/ri';
 import { FaEyeSlash } from 'react-icons/fa';
 import { IoEyeSharp } from 'react-icons/io5';
 import { BsGoogle } from 'react-icons/bs';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { ContextAuth } from '../../Context/Context';
 import { PulseLoader} from 'react-spinners';
@@ -22,6 +22,7 @@ const SignUp = () => {
     const provider = new GoogleAuthProvider();
     const { emailPassSignUp, upProfile, googleSignIn, shortLoading, setLoading } = useContext(ContextAuth)
     const navigate = useNavigate()
+    const location = useLocation()
 
 
     // Form submit🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱🍱
@@ -56,7 +57,7 @@ const SignUp = () => {
                             showConfirmButton: false,
                             timer: 1500
                         });
-                        navigate('/')
+                        navigate(location.state || '/')
                         setLoading(false)
                     }).catch((error) => {
                         setLoading(false)
@@ -162,7 +163,7 @@ const SignUp = () => {
                         </form>
 
                         <div className='lg:px-5'>
-                            <p className='my-5 ms-2 text-start text-white'>Already have an account? <Link className='underline underline-offset-4' to='/Signin'>Sign in</Link>
+                            <p className='my-5 ms-2 text-start text-white'>Already have an account? <Link className='underline underline-offset-4' to='/Signin' state={location.state}>Sign in</Link>
                             </p>
 
                             <div className='mb-4 flex justify-center items-center'>

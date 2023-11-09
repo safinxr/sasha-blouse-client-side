@@ -7,7 +7,7 @@ import { RiLockPasswordFill } from 'react-icons/ri';
 import { FaEyeSlash } from 'react-icons/fa';
 import { IoEyeSharp } from 'react-icons/io5';
 import { BsGoogle } from 'react-icons/bs';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { ContextAuth } from '../../Context/Context';
 import { PulseLoader } from 'react-spinners';
@@ -21,6 +21,8 @@ const SignIn = () => {
     const provider = new GoogleAuthProvider();
     const {  emailPassSignIn, upProfile, googleSignIn, shortLoading, setLoading } = useContext(ContextAuth)
     const navigate = useNavigate()
+    const location = useLocation()
+
 
 
 
@@ -34,7 +36,7 @@ const SignIn = () => {
 
          emailPassSignIn(email, password)
             .then(res => {
-                navigate('/')
+                navigate(location.state || '/')
             })
             .catch(error => {
                 setLoading(false)
@@ -116,7 +118,7 @@ const SignIn = () => {
                         </form>
 
                         <div className='lg:px-5'>
-                            <p className='my-5 ms-2 text-start text-white'>Don't have an account? <Link className='underline underline-offset-4' to='/Signup'>Sign up</Link>
+                            <p className='my-5 ms-2 text-start text-white'>Don't have an account? <Link className='underline underline-offset-4' to='/Signup' state={location.state}>Sign up</Link>
                             </p>
 
                             <div className='mb-4 flex justify-center items-center'>
