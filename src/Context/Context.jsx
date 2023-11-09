@@ -18,13 +18,13 @@ const Context = ({ children }) => {
             // if user exists then asked for JWT token
             const userEmail = { email: currentUser?.email }
             if (currentUser) {
-                axios.post('http://localhost:5000/jwt', userEmail, { withCredentials: true })
+                axios.post('https://sasha-server-side.vercel.app/jwt', userEmail, { withCredentials: true })
 
             }
 
             // if user Doesn't exists then remove token
             if (!currentUser) {
-                axios.post('http://localhost:5000/logout', userEmail, { withCredentials: true })
+                axios.post('https://sasha-server-side.vercel.app/logout', userEmail, { withCredentials: true })
             }
         });
         return () => {

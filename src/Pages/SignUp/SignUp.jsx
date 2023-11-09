@@ -48,7 +48,7 @@ const SignUp = () => {
             .then(res => {
                 upProfile(name)
                     .then(() => {
-                        axios.post('http://localhost:5000/allusers', {name, email})
+                        axios.post('https://sasha-server-side.vercel.app/allusers', {name, email})
                         .then(res => console.log(res.data))
                         Swal.fire({
                             position: "center",
@@ -83,7 +83,7 @@ const SignUp = () => {
                 const user = res.user
                 const name = user.displayName
                 const email = user.email
-                axios.post('http://localhost:5000/allusers', { name, email })
+                axios.post('https://sasha-server-side.vercel.app/allusers', { name, email })
                     .then(res => console.log(res.data))
                 navigate('/')
             }).catch((error) => {

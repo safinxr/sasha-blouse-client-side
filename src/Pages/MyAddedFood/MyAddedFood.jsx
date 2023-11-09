@@ -16,7 +16,7 @@ const MyAddedFood = () => {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/myaddedfood/?email=${user.email}`, {withCredentials:true})
+        axios.get(`https://sasha-server-side.vercel.app/myaddedfood/?email=${user.email}`, {withCredentials:true})
             .then(res => {
                 setData(res.data)
                 setLoading(false)
@@ -24,7 +24,7 @@ const MyAddedFood = () => {
     }, [])
 
     const deleteBtn = (id) => {
-        axios.delete(`http://localhost:5000/deletefood/?id=${id}`)
+        axios.delete(`https://sasha-server-side.vercel.app/deletefood/?id=${id}`)
             .then(res => {
 
                 const newData = data.filter(oldData => oldData._id !== id)

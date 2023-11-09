@@ -25,7 +25,7 @@ const AddNewFood = () => {
         const carData = { email, added_by, food_name, food_category, food_origin, description, price, food_image, quantity, ordered };
 
 
-        axios.post('http://localhost:5000/addfood', carData)
+        axios.post('https://sasha-server-side.vercel.app/addfood', carData)
             .then(res => {
                 Swal.fire({
                     position: 'center',

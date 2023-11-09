@@ -22,7 +22,7 @@ const BuyPage = () => {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/singlefood/?id=${id}`)
+        axios.get(`https://sasha-server-side.vercel.app/singlefood/?id=${id}`)
             .then(res => {
                 setData(res.data)
             })
@@ -57,7 +57,7 @@ const BuyPage = () => {
                     const buyingData = { food_name, food_image, food_category, totalPrice, foodId, qty, food_origin, description, email, added_by }
                     const newQty = quantity - qty;
 
-                    axios.post(`http://localhost:5000/buyingdata/?newqty=${newQty}&od=${ordered}`, buyingData)
+                    axios.post(`https://sasha-server-side.vercel.app/buyingdata/?newqty=${newQty}&od=${ordered}`, buyingData)
                         .then(res => {
                             setReset(!reset)
                             Swal.fire({

@@ -27,7 +27,7 @@ const SingleFood = () => {
     const { _id, food_name, food_image, food_category, price, quantity, added_by, food_origin, description} = data
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/singlefood/?id=${id}`)
+        axios.get(`https://sasha-server-side.vercel.app/singlefood/?id=${id}`)
             .then(res => {
                 setData(res.data)
                 setLoading(false)
