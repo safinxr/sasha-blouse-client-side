@@ -85,7 +85,7 @@ const SignUp = () => {
                 const email = user.email
                 axios.post('https://sasha-server-side.vercel.app/allusers', { name, email })
                     .then(res => console.log(res.data))
-                navigate('/')
+                navigate(location.state || '/')
             }).catch((error) => {
                 console.log(error.message);
             });

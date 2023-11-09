@@ -49,7 +49,7 @@ const SignIn = () => {
     const googleHandel = (xProvider) => {
         googleSignIn(xProvider)
             .then(() => {
-                navigate('/')
+                navigate(location.state || '/')
             }).catch((error) => {
                 console.log(error.message);
             });
