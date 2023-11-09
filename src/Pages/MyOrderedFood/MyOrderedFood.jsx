@@ -11,7 +11,7 @@ const MyOrderedFood = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        axios.get(`https://sasha-server-side.vercel.app/myordered/?email=${user.email}`)
+        axios.get(`https://sasha-server-side.vercel.app/myordered/?email=${user.email}`, {withCredentials:true})
             .then(res => {
                 setData(res.data)
                 setLoading(false)
