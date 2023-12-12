@@ -41,7 +41,7 @@ const AddNewFood = () => {
     }
 
     return (
-        <div className='bg-[url("https://i.ibb.co/pyW7JSY/Group-1.png")] bg-cover bg-center bg-white bg-blend-overlay bg-opacity-90  flex items-center justify-center'>
+        <div className='bg-[url("https://i.ibb.co/pyW7JSY/Group-1.png")] bg-cover h-full bg-center bg-white bg-blend-overlay bg-opacity-90  flex items-center justify-center'>
             <Helmet>
                 <title>Add New Food - Sasha Blouse</title>
             </Helmet>

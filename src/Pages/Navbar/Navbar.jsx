@@ -97,7 +97,7 @@ const Navbar = () => {
     </>
         const userInfo = <div className='flex flex-col lg:flex-row lg:items-center '>
         <div className="dropdown dropdown-bottom dropdown-end flex items-center">
-            <label tabIndex={0} className="hover:scale-105">{
+            <label tabIndex={0} className="hover:scale-105 cursor-pointer">{
                 user?.photoURL ?
                     <img className='w-10 h-10  rounded-full ' src={user?.photoURL} alt="" />
                     :

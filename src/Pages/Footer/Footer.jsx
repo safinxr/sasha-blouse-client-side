@@ -1,9 +1,24 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+
 
 const Footer = () => {
+    const [margin, setMargin] = useState()
+    let { pathname } = useLocation();
+
+    useEffect(() => {
+        if (pathname === '/addnewfood') {
+            setMargin(false)
+
+        }
+        else {
+            setMargin(true)
+        }
+    }, [pathname])
+
+
     return (
-        <div className='mt-32 black-bg'>
+        <div className={margin ? 'mt-32 black-bg': 'black-bg'}>
             <footer className=" flex text-white max-w-6xl mx-auto px-3 md:px-8 lf:px-0
             md:justify-between justify-around py-14
             ">

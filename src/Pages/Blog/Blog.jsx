@@ -13,7 +13,6 @@ const Blog = () => {
     }, []);
 
 
-    console.log(AllData);
     return (
         <div >
             <Helmet>
