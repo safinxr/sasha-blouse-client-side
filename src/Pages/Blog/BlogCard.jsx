@@ -3,16 +3,7 @@ import React from 'react';
 const BlogCard = ({ data }) => {
     const { date, title, img, description } = data
     return (
-        // <div className="card card-side bg-base-100 shadow-xl">
-        //     <figure><img className='h-[400px] w-[400px]' src={img} alt="Movie" /></figure>
-        //     <div className="card-body">
-        //         <h2 className="card-title">{title}</h2>
-        //         <p>Click the button to watch on Jetflix app.</p>
-        //         <div className="card-actions justify-end">
-        //             <button className="btn btn-primary">Watch</button>
-        //         </div>
-        //     </div>
-        // </div>
+        
         <div className='flex flex-col lg:flex-row'>
             <div className='flex justify-center' >
                 <img className='h-[400px] w-[400px] rounded-lg object-cover ' src={img} alt="food" />
