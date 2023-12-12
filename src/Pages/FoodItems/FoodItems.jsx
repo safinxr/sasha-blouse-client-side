@@ -35,7 +35,7 @@ const FoodItems = () => {
         setInputValue(true)
     }
     const searchBtn = () => {
-        if(search){
+        if (search) {
             setLoading(true)
             console.log(search);
             axios.get(`https://sasha-server-side.vercel.app/searchfood/?name=${search}&`)
@@ -45,7 +45,7 @@ const FoodItems = () => {
                     setLoading(false)
                 })
         }
-        else{
+        else {
             setInputValue(false)
         }
     }
@@ -61,7 +61,7 @@ const FoodItems = () => {
             <Helmet>
                 <title>All Food Items - Sasha Blouse</title>
             </Helmet>
-            <div className={inputValue ? 'mt-12 text-2xl max-w-4xl mx-auto rounded-md font-medium border-2  border-[#231F20] flex items-center':
+            <div className={inputValue ? 'mt-12 text-2xl max-w-4xl mx-auto rounded-md font-medium border-2  border-[#231F20] flex items-center' :
                 'mt-12 text-2xl max-w-4xl mx-auto rounded-md font-medium border-2  border-[#eb2d2d] flex items-center'
             }>
                 <div className='px-4'>
@@ -91,12 +91,12 @@ const FoodItems = () => {
                             allData.map(food => <AllFoodCard food={food} key={food._id}></AllFoodCard>)
                         }
                     </div>
-                    :
-                    <div className='flex justify-center items-center h-[50vh]'>
+                        :
+                        <div className='flex justify-center items-center h-[50vh]'>
                             <h2 className='text-4xl text-gray-500  font-semibold uppercase'>no food found </h2>
                             <h2 className='text-5xl text-gray-500  font-semibold uppercase ms-2'><HiOutlineEmojiSad></HiOutlineEmojiSad></h2>
-                    </div>
-                    
+                        </div>
+
 
             }
 

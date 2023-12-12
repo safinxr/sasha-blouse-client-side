@@ -5,12 +5,22 @@ import { Fade, Slide, Zoom } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import b1 from '../../../assets/images/b1.png'
+import b2 from '../../../assets/images/b2.png'
+import b3 from '../../../assets/images/b3.png'
+import bgImg from '../../../assets/images/bg-img.png'
+
+
 
 
 const Banner = () => {
     useEffect(() => {
         AOS.init();
     }, [])
+
+    const inlineStyle = {
+        backgroundImage: `url(${bgImg})`,
+    };
 
     return (
         <div className='mt-[-73px] bg-[url("https://i.ibb.co/pyW7JSY/Group-1.png")] bg-cover bg-center bg-white bg-blend-overlay bg-opacity-90 '>
@@ -35,7 +45,7 @@ const Banner = () => {
 
                         </div>
                         <div className='flex-1'>
-                            <img className='ms-auto' src="https://i.ibb.co/NCVqvmF/baner.png" alt="" />
+                            <img className='ms-auto' src={b1} alt="" />
                         </div>
                     </div>
                     <div className='flex flex-col-reverse lg:flex-row items-center'>
@@ -52,7 +62,7 @@ const Banner = () => {
 
                         </div>
                         <div className='flex-1'>
-                            <img className='ms-auto ' src="https://i.ibb.co/YcZwxyM/baner1.png" alt="" />
+                            <img className='ms-auto ' src={b2} alt="" />
                         </div>
                     </div>
                     <div className='flex flex-col-reverse lg:flex-row items-center '>
@@ -69,7 +79,7 @@ const Banner = () => {
 
                         </div>
                         <div className='flex-1'>
-                            <img className='ms-auto' src="https://i.ibb.co/QjC9nTr/first-slider.png" alt="" />
+                            <img className='ms-auto' src={b3} alt="" />
                         </div>
                     </div>
                 </Slide>
