@@ -5,8 +5,10 @@
 ## Demo
 [Website Live link](https://sasha-blouse.web.app/)
 
+## Description
+Sasha Blouse is an online platform for food delivery. Users can order food and sellers can showcase their menus for ordering. It features a dynamic search function to help users find the food they desire.
 
-# Features
+## Features
 ### Visually Pleasing Design:
 This website features a visually appealing design with pleasing color contrast, proper alignment, and space, ensuring a user-friendly and attractive interface.
 
