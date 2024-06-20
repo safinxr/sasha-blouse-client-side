@@ -25,4 +25,4 @@ Users can explore a variety of food items with a search functionality, paginatio
 The user profile section displays added food items, enables food item addition, and shows ordered food items, providing a personalized experience.
 
 ### Authentication: 
-The website implements user authentication, allowing users to register and log in.
+The website implements user authentication, allowing users to register and log in..
